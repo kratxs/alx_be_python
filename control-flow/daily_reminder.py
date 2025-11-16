@@ -21,6 +21,6 @@ while True:
         message += ". Consider completing it when you have free time."
 
     # Print the final reminder
-    print("\nReminder:", message)
+    print(f"Reminder: {message}")
 
     break  # Exit the loop after generating the reminder
