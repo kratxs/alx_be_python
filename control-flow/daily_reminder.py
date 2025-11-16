@@ -1,21 +1,21 @@
 # Prompt user to input a task description
-task = input("Enter your task: ")
-priority = input("Priority (high/medium/low): ").lower
-time_bound = input("Is it time bound? (yes/no): ").lower
+Task = input("Enter your task: ")
+Priority = input("Priority (high/medium/low): ").lower
+Time_Bound = input("Is it time-bound? (yes/no): ").lower
 
 while True:
-    match priority:
+    match Priority:
         case "high":
-            message = f"'{task}' is a high priority task"
+            message = f"'{Task}' is a high priority task"
         case "medium":
-            message = f"'{task}' is a medium priority task"
+            message = f"'{Task}' is a medium priority task"
         case "low":
-            message = f"'{task}' is a low priority task"
+            message = f"'{Task}' is a low priority task"
         case _:
-            message = f"'{task}' has an unspecified priority level"
+            message = f"'{Task}' has an unspecified priority level"
 
     # Modify the message if time-bound
-    if time_bound == "yes":
+    if Time_Bound == "yes":
         message += " that requires immediate attention today!"
     else:
         message += ". Consider completing it when you have free time."
